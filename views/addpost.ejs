@@ -1,0 +1,64 @@
+<%# The about post page lists all the posts added to the database. %>
+<%# The form method allows the user to input a post by inserting the correct inputs in each box. %>
+<%# The submit button allows for the data to be inserted into the database. %>
+
+<!doctype html>
+
+<html>
+
+  <head>
+
+
+    <title><%=forumName%> - Add Post</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
+  
+
+  </head>
+
+
+  <body>
+
+
+    <h1><%=forumName%></h1>
+
+    <h2>Add a Post</h2>
+
+
+  <form method="POST" action="/postadded">
+
+
+     <p>Username: <input id="username" type="text" name="username" value="<%=username%>" /></p>
+
+     <p>Topic: <input id="topic" type="text" name="topic" value="<%=topic%>" /></p>
+
+     <p>Title: <input id="title" type="text" name="title" value="<%=title%>" /></p>
+
+     <p>Content: <textarea id="content" type="text" name="content" value="" ><%=content%></textarea></p>
+
+  
+
+  <input type="submit" value="Add Post" />
+
+
+  </form>    
+
+
+     <p class="errormessage"><%=errormessage %></p>
+
+
+  </body>
+
+  <form>
+
+  <div><div>
+
+
+  <input type="button" value="Go back" onclick="history.back()" />
+
+  
+
+ </form>
+
+</html>

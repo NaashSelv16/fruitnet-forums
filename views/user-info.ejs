@@ -1,0 +1,73 @@
+<%# The user info page displays all the details of every user, including whether they have posts. %>
+
+<!doctype html>
+
+<html>
+
+
+  <head>
+
+  
+
+    <title><%=forumName%> - Posts</title>
+
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+
+
+  </head>
+
+
+  <body>
+
+
+    <h1><%=forumName%</h1>
+
+    <h2>View posts</h2>
+
+
+  <table>
+
+
+  <tr><th>Username</th><th>First Name</th><th>Surname</th><th>Country</th><th>Topic</th></tr>
+
+
+    <% user.forEach(function(user) { %>
+
+
+  <tr>
+
+
+    <td><%= user.username %></td>
+
+    <td><%= user.firstname %></td>
+
+    <td><%= user.surname %></td>
+
+    <td><%= user.country %></td>
+
+    <td><%= user.topic_title %></td>
+
+
+  </tr>
+
+
+    <% }) %>   
+
+
+  </table>   
+
+  </body>
+
+  <form>
+
+  <div></div>
+
+    
+
+  <input type="button" value="Go back" onclick="history.back()" />
+
+  
+
+ </form>
+
+</html>

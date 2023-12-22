@@ -1,0 +1,70 @@
+<%# The topics info page displays all the users that have created posts according to different topics. %>
+
+<!doctype html>
+
+<html>
+
+  
+
+  <head>
+
+    
+
+    <title><%=forumName%> - Posts</title>
+
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+
+
+  </head>
+
+
+  <body>
+
+
+    <h1><%=forumName%></h1>
+
+    <h2>View posts</h2>
+
+
+  <table>
+
+
+  <tr><th>Topic Title</th><th>Description</th><th>User</th></tr>
+
+
+    <% topic.forEach(function(topic) { %>
+
+
+  <tr>
+
+
+    <td><%= topic.topic_title %></td>
+
+    <td><%= topic.topic_description %></td>
+
+    <td><%= topic.username %></td>
+
+
+  </tr>
+
+
+    <% }) %>   
+
+
+  </table>   
+
+  </body>
+
+  <form>
+
+  <div></div>
+
+    
+
+  <input type="button" value="Go back" onclick="history.back()" />
+
+  
+
+ </form>
+
+</html>

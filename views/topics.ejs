@@ -1,71 +1,30 @@
 <%# The topics page displays all the topics available in the database whilst including a simple description of the topics. %>
 <%# The href tag links back to the topics info page so that they correspond. %>
-
-
 <!doctype html>
-
 <html>
-
   
-
   <head>
-
     
-
     <title><%=forumName%> - Topics</title>
-
     <link rel="stylesheet" type="text/css" href="main.css" />
-
-
   </head>
-
-
   <body>
-
-
     <h1><%=forumName%></h1>
-
     <h2>Topics</h2>
-
-
   <table>
-
-
   <tr><th>Topic</th><th>Description</th></tr>
-
-
      <% topics.forEach(function(topic) { %>
-
-
   <tr>
-
-
-  <td><a href="/topic-link-result/<%=topic.topic_title%>"><%= topic.topic_title %></a></td>
-
-
-    <td><%= topic.topic_description %></td>
-
-
+  <td><a href="/topic-link-result/<%=topics.topic_title%>"><%= topics.topic_title %></a></td>
+    <td><%= topics.topic_description %></td>
   </tr>
-
-
     <% }) %>    
-
-
   </table>    
-
   </body>
-
   <form>
-
   <div><div>
-
     
-
   <input type="button" value="Go back" onclick="history.back()" />
-
   
-
   </form>
-
 </html>

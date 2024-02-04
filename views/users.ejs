@@ -1,76 +1,35 @@
 <%# The users ejs shows all the users on the database including their details. %>
 <%# The href tag links back to the users info ejs. %>
 <!doctype html>
-
 <html>
-
   
-
   <head>
-
     
-
     <title><%=forumName%> - Users</title>
-
     <link rel="stylesheet" type="text/css" href="main.css" />
-
   
-
   </head>
-
-
   <body>
-
-
     <h1><%=forumName%></h1>
-
     <h2>Users</h2>
-
-
   <table>
-
-
   <tr><th>Username</th><th>First Name</th><th>Surname</th><th>Country</th></tr>
-
-
     <% users.forEach(function(user) { %>
-
-
   <tr>
-
-
-  <td><a href="/username-link-result/<%=user.username%>"><%= user.username %></a></td>
-
-
-    <td><%= user.firstname %></td>
-
-    <td><%= user.surname %></td>
-
-    <td><%= user.country %></td>
-
+  <td><a href="/username-link-result/<%=user.username%>"><%= users.username %></a></td>
+    <td><%= users.firstname %></td>
+    <td><%= users.surname %></td>
+    <td><%= users.country %></td>
  
-
   </tr>
-
  
-
     <% }) %>      
-
-
   </table>  
-
   </body>
-
   <form>
-
   <div><div>
-
     
-
   <input type="button" value="Go back" onclick="history.back()" />
-
     
-
  </form>
-
 </html>

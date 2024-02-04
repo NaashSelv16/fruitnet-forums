@@ -1,57 +1,26 @@
 <%# The search page allows the user to search through the database to find posts. %>
 <%# This ejs page is used to input data such as specific words of a post. %>
-
 <!doctype html>
-
 <html>
-
   
-
   <head>
-
-
     <title><%=forumName%> - Search</title>
-
     <link rel="stylesheet" type="text/css" href="main.css" />
-
   
-
   </head>
-
-
   <body>
-
-
      <h1><%=forumName%></h1>
-
      <h2>Search for posts</h2>
-
-
   <form action="/search-result" method="GET">
-
-
     <p>What are you interested in?</p>
-
-
   <input id="search-box" type="text" name="keyword" value="">
-
   <input type="submit" value="Search" >
-
-
   </form>
-
   </body>
-
   <form>
-
   <div><div>
-
   
-
   <input type="button" value="Go back" onclick="history.back()" />
-
     
-
  </form>
-
 </html>

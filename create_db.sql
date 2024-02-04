@@ -31,10 +31,12 @@ CREATE TABLE `Posts` (
 
 CREATE TABLE `memberships` (
   `user_id` int NOT NULL,
-  `topic_id` int NOT NULL
+  `topic_id` int NOT NULL,
+  `count_membership` int NOT NULL);
+
 
 # Create the app user and give it access to the database
-CREATE USER IF NOT EXISTS 'appuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'app2027';
-GRANT ALL PRIVILEGES ON myforum.* TO 'appuser'@'localhost';
+CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YES';
+GRANT ALL PRIVILEGES ON myforum.* TO 'root'@'localhost';
 
 
